@@ -272,7 +272,7 @@ figure {
   flex-wrap: wrap;
 }
 .event-list-title {
-  margin-left: 20px;
+  margin-left: 0;
 }
 /* cambiamos el tamaño fijo de ancho y margen */
 .event { 
@@ -316,6 +316,7 @@ figure {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 16px 16px;
 }
 
 .social {
@@ -363,6 +364,7 @@ figure {
   border-radius: 5px;
   width: 100px;
   margin-top: 10px;
+  border: white 1px solid;
 }
 
 .form-email h3 { 
@@ -542,19 +544,46 @@ figure {
 
 
 
-/* linea azul */
 
-.linea-azul {
-  /* border: 1px solid red; */
-  position: absolute;
+/*linea azul - borde desde */
+.container-lineaAzul
+{
+  /*margin-left: 16px;*/
+  border-left: #056fff 35px solid;
+  position: relative;
+}
+
+h2 
+{
+  position: relative;
+  padding-left: 47px;
+}
+
+.bloque
+{
   background-color: #056fff;
-  width: 5vw;
-  height: 2341px;
-  z-index: 5;
+  width: 70px;
+  height: 50px;
+  position: absolute;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  
 }
-body{
-  padding-left: 10%;
+
+.h2-bloqueuno
+{
+  left: -20px;
 }
+
+.bloque-uno,
+.bloque-dos,
+.bloque-tres
+{
+  top: -10px;
+  left: -29px;
+}
+
+
 
 
 /* desktop first que empieces desde el MQ más grande */
@@ -564,7 +593,7 @@ body{
 {
   .container
   {
-    padding: 0 1em;
+    padding: 0 .1em;
   }
 
 
@@ -686,7 +715,7 @@ body{
     background: rgba(5, 111, 255, .9);;
     z-index: 3;
     top: 0; /* para que se pegue el contenedor menu arriba */
-    left: -100vh; /* para que se ponga -100vh a la izquierda desde la izquierda te va a mover hacia la izquierda tal tamaño */
+    left: -200vh; /* para que se ponga -100vh a la izquierda desde la izquierda te va a mover hacia la izquierda tal tamaño */
     bottom: 0;
     width: 100vw; /* tomara el 100% del ancho del viewport */
     /* height: 100vh; */
@@ -775,6 +804,29 @@ body{
 /* desde 320px hasta 480px o = va a ejecutar las reglas */
 @media screen and (max-width: 480px)
 {
+
+  h2
+  {
+    font-size: 23px;
+  }
+
+  /*linea azul - borde desde */
+.container-lineaAzul
+{
+  /*margin-left: 16px;*/
+  border-left: #056fff 30px solid;
+  position: relative;
+}
+
+.bloque {
+    background-color: #056fff;
+    width: 70px;
+    height: 45px;
+    position: absolute;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
 
   .tecnologias
   {
@@ -865,6 +917,35 @@ body{
 /* todo lo que sea inferior a 320px o = va a ejecutar las reglas */
 @media screen and (max-width: 320px)
 {
+
+  h2
+  {
+    font-size: 21px;
+  }
+
+    /*linea azul - borde desde */
+.container-lineaAzul
+{
+  /*margin-left: 16px;*/
+  border-left: #056fff 25px solid;
+  position: relative;
+}
+
+.bloque {
+    background-color: #056fff;
+    width: 70px;
+    height: 40px;
+    position: absolute;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.bloque-uno, .bloque-dos, .bloque-tres {
+    top: -3px;
+    left: -29px;
+}
+
+
 
   .lado-izquierdo-2item, .lado-derecho-2item
   {

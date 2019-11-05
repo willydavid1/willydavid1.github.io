@@ -120,7 +120,14 @@ h2 {
 
 .hero-image{
   object-fit: cover;
+  width: 50%
 }
+
+.h1-hero
+{
+  width: 50%
+}
+
 
 
 .portfolio {
@@ -593,12 +600,29 @@ h2
 {
   .container
   {
-    padding: 0 .1em;
+    padding: 0 0;
   }
 
 
 
-  /* seccion hero */
+  
+
+  .h1-hero
+  {
+    font-size: 2em;
+    z-index: 2;
+    width: 48%;
+    padding-left: 2%; 
+  }
+
+}
+
+/* desde 480px hasta 768px o = va a ejecutar estas reglas */
+@media screen and (max-width: 767px)
+{
+
+
+/* seccion hero */
   .hero
   {
     height: auto;
@@ -619,17 +643,15 @@ h2
     width: 100%;
   }
 
-  h1
+  .h1-hero
   {
     font-size: 2em;
     z-index: 2;
+    width: 100%;
+    padding-left: 2%; 
   }
 
-}
 
-/* desde 480px hasta 768px o = va a ejecutar estas reglas */
-@media screen and (max-width: 767px)
-{
 
   .img-tecnologias
   {
@@ -804,6 +826,18 @@ h2
 /* desde 320px hasta 480px o = va a ejecutar las reglas */
 @media screen and (max-width: 480px)
 {
+
+  .h1-hero
+  {
+    font-size: 1.5em;
+    z-index: 2;
+    width: 100%;
+    padding-left: 2%; 
+  }
+
+
+
+
 
   h2
   {

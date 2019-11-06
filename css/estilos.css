@@ -132,8 +132,18 @@ h2 {
 
 .hero-image{
   object-fit: cover;
-  width: 50%
+  width: 50%;
 }
+
+@media screen and (min-width: 768px)
+{
+  .hero-image:hover
+  {
+    border-radius: 15% 85% 12% 88% / 89% 15% 85% 11%  ;
+    transition: 1s;
+  }
+}
+
 
 .h1-hero
 {

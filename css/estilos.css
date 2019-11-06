@@ -77,6 +77,8 @@ valores */
 
 
 
+
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;
@@ -335,6 +337,33 @@ figure {
   border-radius: 5px;
 }
 
+
+
+
+.final-linea-azul
+{
+ /* border: 1px solid red;  */
+ position: absolute;
+ width: 35px;
+ height: 60px;
+ left: 0;
+ top: 0;
+ background: white;
+}
+
+.final-linea-azul-parte2
+{
+  background-color: white;
+  width: 70px;
+  height: 45px;
+  position: absolute;
+  top: 31px;
+  /* border: black 1px solid; */
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+
 .contact {
   background-color: #056fff;
   color: white;
@@ -343,7 +372,8 @@ figure {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 16px 16px;
+  padding: 16px 16px 16px 85px;
+  position: relative;
 }
 
 .social {
@@ -848,6 +878,30 @@ h2
 @media screen and (max-width: 480px)
 {
 
+  .final-linea-azul
+{
+ /* border: 1px solid red;  */
+ position: absolute;
+ width: 30px;
+ height: 60px;
+ left: 0;
+ top: 0;
+ background: white;
+}
+
+.final-linea-azul-parte2
+{
+  background-color: white;
+  width: 70px;
+  height: 40px;
+  position: absolute;
+  top: 31px;
+  /* border: black 1px solid; */
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+
   .portfolio {
     background: #fafafa;
     padding: 9px;
@@ -994,6 +1048,29 @@ h2
 /* todo lo que sea inferior a 320px o = va a ejecutar las reglas */
 @media screen and (max-width: 320px)
 {
+
+  .final-linea-azul
+{
+ /* border: 1px solid red;  */
+ position: absolute;
+ width: 20px;
+ height: 60px;
+ left: 0;
+ top: 0;
+ background: white;
+}
+
+.final-linea-azul-parte2
+{
+  background-color: white;
+  width: 50px;
+  height: 40px;
+  position: absolute;
+  top: 31px;
+  /* border: black 1px solid; */
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
 
   .project
   {

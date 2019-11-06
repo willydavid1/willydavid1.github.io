@@ -342,6 +342,7 @@ figure {
 
 .final-linea-azul
 {
+  display: none;
  /* border: 1px solid red;  */
  position: absolute;
  width: 35px;
@@ -372,7 +373,7 @@ figure {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 16px 16px 16px 85px;
+  padding: 16px 16px ;
   position: relative;
 }
 
@@ -641,18 +642,28 @@ h2
 }
 
 
-
-
 /* desktop first que empieces desde el MQ más grande */
 
 /* desde 768px hasta 1024px o = va a ejecutar estas reglas */
 @media screen and (max-width: 1023px)
 {
+
+  .final-linea-azul
+  {
+    display: block;
+  }
+
+
   .container
   {
     padding: 0 0;
   }
 
+  .contact
+  {
+    padding: 16px 16px 16px 85px;
+    height: auto;
+  }
 
 
   

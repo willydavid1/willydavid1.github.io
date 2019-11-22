@@ -903,7 +903,7 @@ h2
 {
  /* border: 1px solid red;  */
  position: absolute;
- width: 30px;
+ width: 27px;
  height: 60px;
  left: 0;
  top: 0;
@@ -966,7 +966,7 @@ h2
 .container-lineaAzul
 {
   /*margin-left: 16px;*/
-  border-left: #056fff 30px solid;
+  border-left: #056fff 27px solid;
   position: relative;
 }
 
@@ -1158,4 +1158,22 @@ h2
 
 
 
+}
+
+/* estilos para .final-linea-azul */
+@media screen and (min-width: 1024px) {
+  .container{
+    position: relative;
+
+  }
+  .final-linea-azul
+  {
+  display: block;
+  left: -17px;
+  top: -17px;
+  }
+  .container{
+    padding: 0px 16px 0px 85px;
+    height: auto;
+  }
 }

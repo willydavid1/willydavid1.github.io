@@ -1172,8 +1172,38 @@ h2
   left: -17px;
   top: -17px;
   }
-  .container{
+  /* le ponemos pading a esa seccion para que entre final-linea-azul  */
+  .padding-container{
     padding: 0px 16px 0px 85px;
     height: auto;
+    /* border: 1px solid red; */ */
+    max-width: 1000px;
+    /* width: 100%; */
+    flex: 1;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
   }
+  
+}
+
+
+
+/* lo hacemos un container */
+.padding-container{
+  /* padding: 0px 16px 0px 85px; */
+  height: auto;
+  /* border: 1px solid red; */ */
+  max-width: 1000px;
+  /* width: 100%; */
+  flex: 1;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
 }

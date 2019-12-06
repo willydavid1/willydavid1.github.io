@@ -167,7 +167,7 @@ h2 {
   /* border-top-color: red;
   border-top-width: 15px;
   border-top-style: solid; */
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   border-radius: 10px;
   /* border-top-left-radius: 50px;
   border-top-right-radius: 10px;
@@ -184,6 +184,12 @@ h2 {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+
+
+  /* sombras  */
+  -webkit-box-shadow: 8px 0px 37px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 8px 0px 37px 0px rgba(0,0,0,0.75);
+  box-shadow: 8px 0px 37px 0px rgba(0,0,0,0.75);
 }
 .project-course,
 .project-date,
@@ -245,10 +251,6 @@ figure {
   margin: 0;
 }
 
-.header a {
-  color: white;
-  text-decoration: none;
-}
 .menu {
   height: inherit;
 }
@@ -264,6 +266,15 @@ figure {
   align-items: center;
   height: inherit;
   padding: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.header a:hover {
+  background-color: white;
+  color: #1B2127;
+  transition: 1s;
+  clip-path: polygon(6% 0, 100% 0%, 94% 100%, 0% 100%);
 }
 
 .flexbox {
@@ -424,19 +435,22 @@ figure {
   background-position-x: 5px;
 }
 
-.form-email button {
+.form-email a {
   display: block;
   background: transparent;
   color: white;
   padding: 10px 0;
-  border-radius: 5px;
-  width: 100px;
-  margin-top: 10px;
+  border-radius: 10px;
+  width: 90%;
+  margin: 0 auto;
   border: white 1px solid;
+  text-align: center;
+  text-decoration: none;
 }
 
 .form-email h3 { 
   font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 10px;
 }
 
 .container {
@@ -1039,9 +1053,10 @@ h2
     display: block;
   }
 
-  .form-email button 
+  .form-email a 
   {
     margin: 1em auto; /* 1em == 11px | el tamaño fuente de este boton vale 11px por lo que 1em vale 11px */
+    width: 60%;
   }
 
   .form-email h3

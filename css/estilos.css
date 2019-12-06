@@ -79,6 +79,11 @@ valores */
 
 
 
+/* para efectos de scroll suaves */
+html{
+	scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0;

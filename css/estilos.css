@@ -1210,6 +1210,13 @@ h2
   
 }
 
+@media screen and (max-width: 425px){
+  .hero-image {
+      height: 154%;
+      width: 140%;
+  }
+}
+
 
 
 /* lo hacemos un container */

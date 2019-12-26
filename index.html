@@ -20,6 +20,9 @@
     </style> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="css/animate.css">
+
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145816596-2"></script>
     <script>
@@ -46,7 +49,7 @@
     <header class="header">
       <div class="container contenedor-video__header">
         <figure class="logo">
-          <img src="images/favicon.png" height="50" alt="Logo de http://leonidasesteban.com" />
+          <img class="animated flash delay-2s" src="images/favicon.png" height="50" alt="Logo de http://leonidasesteban.com" />
         </figure>
         <nav class="menu">
           <ol>
@@ -70,13 +73,13 @@
     <section class="hero">
       
       <div class="container contenedor-video__hero">
-        <h1 class="h1-hero">
+        <h1 class="h1-hero animated fadeIn delay-1s">
           Hola! Soy <strong>Willy David</strong> <br/> 
           Un <strong> aficionado </strong> a la tecnología, </br>
           Centrado en aprender <strong> a diario, </strong>
           <strong> Autodidacta </strong> y Programador JavaScript-React Frontend
         </h1>
-        <img class="hero-image" src="images/willydavid-hero.jpg" width="500" height="340" alt="imagen principal del sitio"> 
+        <img class="hero-image animated fadeInRight" src="images/willydavid-hero.jpg" width="500" height="340" alt="imagen principal del sitio"> 
       </div>
     </section>
 
@@ -116,7 +119,7 @@
           <img class="project-image" width="500" src="images/hjingenieros.com-website.png" alt="proyecto">
         </figure>
       </article>
-      <article class="project">
+      <article class="project animated" id="animacion" data-animacion="project-juego">
           <div class="project-details">
             <h3 class="project-title">Creación de Juego</h3>
             <h6 class="project-course">Simon dice</h6>
@@ -198,12 +201,12 @@
           <div class="lado-izquierdo">
 
             <div class="lado-izquierdo-2item">
-              <p class="estilos-p">Html</p>
-              <p class="estilos-p">Css</p>
+              <p class="estilos-p animated" data-animacion="parrafohtml" id="animacion">Html</p>
+              <p class="estilos-p animated" data-animacion="parrafocss" id="animacion">Css</p>
             </div>
   
             <div class="lado-izquierdo-1item">
-              <p class="estilos-p">Javascript</p>
+              <p class="estilos-p animated" data-animacion="parrafojs" id="animacion">Javascript</p>
             </div>
   
           </div>
@@ -217,12 +220,12 @@
         <div class="lado-derecho">
 
           <div class="lado-derecho-1item">
-            <p class="estilos-p">React</p>
+            <p class="estilos-p animated" data-animacion="parraforeact" id="animacion">React</p>
           </div>
 
           <div class="lado-derecho-2item">
-            <p class="estilos-p">Redux</p>
-            <p class="estilos-p">Python</p>
+            <p class="estilos-p animated" data-animacion="parraforedux" id="animacion">Redux</p>
+            <p class="estilos-p animated" data-animacion="parrafopython" id="animacion">Python</p>
           </div>
           
         </div>
@@ -307,6 +310,77 @@
         } 
       }
       validation(ipad);
+
+      // animaciones
+      const elements = document.querySelectorAll("#animacion");
+
+      const callback = (entries, observer) => {
+        // console.log(entries); // nos llega solamente un array un elemento
+
+        
+      
+        entries.forEach( (entry) => {
+          //si la entrada se intersecta y si es la animacion correcta ejecutara eso
+          if (entry.isIntersecting && entry.target.dataset.animacion === "project-juego"){
+            entry.target.classList.add("pulse");
+            observer.disconnect();
+          } 
+          else if (entry.isIntersecting && entry.target.dataset.animacion === "parrafohtml") {
+            entry.target.classList.add("fadeIn", "delay-0-33s");
+            observer.disconnect();
+          }
+          else if (entry.isIntersecting && entry.target.dataset.animacion === "parrafojs") {
+            entry.target.classList.add("fadeIn", "delay-0-66s");
+            observer.disconnect();
+          }
+          else if (entry.isIntersecting && entry.target.dataset.animacion === "parrafocss") {
+            entry.target.classList.add("fadeIn", "delay-1s");
+            observer.disconnect();
+          }
+          else if (entry.isIntersecting && entry.target.dataset.animacion === "parraforedux") {
+            entry.target.classList.add("fadeIn", "delay-1-33s");
+            observer.disconnect();
+          }
+          else if (entry.isIntersecting && entry.target.dataset.animacion === "parraforeact") {
+            entry.target.classList.add("fadeIn", "delay-1-66s");
+            observer.disconnect();
+          }
+          else if (entry.isIntersecting && entry.target.dataset.animacion === "parrafopython") {
+            entry.target.classList.add("fadeIn", "delay-2s");
+            observer.disconnect();
+          }
+
+        })
+
+      };
+
+      // del array de los elementos iteramos cada uno y por cada uno creamos un observador para ese elemento
+      elements.forEach(element => {
+
+        // si el elemento contiene estilos p le damos otras opciones
+         if (element.classList.contains("estilos-p")) {
+
+            var options = {
+            // root: ,
+            rootMargin: "100px 0px 0px 0px",
+            threshold: 0
+            };
+
+            const observer = new IntersectionObserver(callback, options);
+            observer.observe(element);
+         } 
+
+        var options = {
+          // root: ,
+          rootMargin: "0px 0px 0px 0px",
+          threshold: .9
+        };
+
+        const observer = new IntersectionObserver(callback, options);
+        observer.observe(element);
+         
+      });
+
 
 
     </script>

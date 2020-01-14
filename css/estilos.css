@@ -177,6 +177,14 @@ h2 {
     border-radius: 15% 85% 12% 88% / 89% 15% 85% 11%  ;
     transition: 1s;
   }
+
+  /* margen a la seccion de portafolio a las imagenes*/
+  .project-imageContainer img 
+  {
+    margin-left: 5px;
+  }
+
+
 }
 
 
@@ -360,6 +368,12 @@ figure {
   border-radius: 10px;
   overflow: hidden;
   background: #f4fbff;
+
+  /* sombras */
+  -webkit-box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.75);
+
 }
 .event-image {
   width: 480px;

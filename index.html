@@ -49,7 +49,7 @@
     <header class="header">
       <div class="container contenedor-video__header">
         <figure class="logo">
-          <img class="animated flash delay-2s" src="images/favicon.png" height="50" alt="logo de willy david da conceicao" />
+          <img class="animated flash delay-3s" src="images/favicon.png" height="50" alt="logo de willy david da conceicao" />
         </figure>
         <nav class="menu">
           <ol>
@@ -106,8 +106,20 @@
       <div class="container">
         <h2 class="h2-bloqueuno"><div class="bloque bloque-uno"></div> Portafolio (Proyectos Destacados)</h2>
 
-        
-      <article class="project">
+        <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Creación de website</h3>
+            <h6 class="project-course">S.Q. Servicios Contables Especializados S.A.S.</h6>
+            <p class="project-url"><small><strong>Puedes verlo en:</strong> <a href="https://sqcontadora.com" class="enlace-proyectos" target="_blank"> sqcontadora.com </a> </small></p>
+            
+            <p class="project-description">En la creación de sqcontadora.com me centre que tuviera un diseño simple y agradable para el usuario, integre animaciones con JavaScript vanilla (puro), diseño responsive para que se adaptara la página a cualquier dispositivo pc, tablet, móvil (basado en Desktop first), construida con el framework Bootstrap + estilos propios css. Implementar Google Analytics para medir las métricas, capa seo, optimización de la pagina para que cargue rápido y integración del dominio con Google Search Console.</p>
+          </div>
+          <figure class="project-imageContainer">
+            <img class="project-image" width="500" src="images/sqcontadora-website.png" alt="proyecto">
+          </figure>
+        </article>
+
+      <article class="project animated" id="animacion" data-animacion="project-juego">
         <div class="project-details">
           <h3 class="project-title">Creación de website</h3>
           <h6 class="project-course">HJ Ingenieros Civiles S.A.S.</h6>
@@ -119,6 +131,7 @@
           <img class="project-image" width="500" src="images/hjingenieros.com-website.png" alt="proyecto">
         </figure>
       </article>
+      
       <article class="project animated" id="animacion" data-animacion="project-juego">
           <div class="project-details">
             <h3 class="project-title">Creación de Juego</h3>
@@ -148,9 +161,9 @@
             <!-- <img class="event-image" src="images/platzi-conf.jpg" width="500" /> -->
           </figure>
           <div class="event-detail">
-            <h3 class="event-title">Curso de responsive design</h3>
-            <p class="event-description">Este es mi Certificado de responsive design fue gracias a platzi donde pude conocer muy bien estos conceptos, y fue en el 2019 donde Fui seleccionado por Developer Circles de Facebook para estudiar Desarrollo Frontend con Platzi. Es una plataforma de educación online.</p>
-            <a class="event-url" href="https://platzi.com/@willy-daconceicao-lozada/" target="_blank">Ver Perfil</a>
+            <h3 class="event-title">Responsive Design</h3>
+            <p class="event-description">Este es mi Certificado de responsive design fue gracias a platzi donde pude conocer muy bien estos conceptos, y fue en el 2019 donde Fui becado por Facebook Developer Circles para estudiar Desarrollo Frontend con Platzi.</p>
+            <a class="event-url" href="https://platzi.com/@willy-daconceicao-lozada/curso/1362-responsive-design/diploma/detalle/" target="_blank">Ver certificado</a>
           </div>
         </article>
 
@@ -161,31 +174,53 @@
           </figure>
           <div class="event-detail">
             <h3 class="event-title">Mi primer certificado AÑO 2016</h3>
-            <p class="event-description">Allí empezó todo donde conocí las bases, los fundamentos HTML y me gusto, a partir de allí empiezo a profundizar más en el tema, realice el curso en una plataforma llamada SoloLearn es una app para aprender lenguajes de programación desde el móvil.</p>
+            <p class="event-description">Allí empezó todo donde conocí las bases, los fundamentos HTML y me gusto, a partir de allí empiezo a profundizar más en el tema, realice el curso en una plataforma llamada SoloLearn es una app para aprender lenguajes de programación.</p>
             <a class="event-url" href="https://www.sololearn.com/Certificate/1014-1966517/pdf/" target="_blank">Ver certificado</a>
           </div>
         </article>
 
+        <article class="event">
+          <figure class="event-imageContainer">
+              <img class="event-image certificado" src="images/desarrollowebonline.PNG" width="500" />
+            <!-- <img class="event-image" src="images/platzi-conf.jpg" width="500" /> -->
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">Desarrollo web online</h3>
+            <p class="event-description">Fundamentos del desarrollo web, donde pude repasar tecnologías que ya conocía como html5 y css3, viendo la estructura y usando código puro ayudándonos de flexbox para poder maquetar, diseñar y construir webs desde la perspectiva visual.</p>
+            <a class="event-url" href="https://platzi.com/@willy-daconceicao-lozada/curso/1350-html5-css3/diploma/detalle/" target="_blank">Ver certificado</a>
+          </div>
+        </article>
 
         <article class="event">
           <figure class="event-imageContainer">
             <img class="event-image certificado" src="images/certificado-github.jpg" width="500" />
           </figure>
           <div class="event-detail">
-            <h3 class="event-title">Certificado de GitHub en PLATZI 2019</h3>
-            <p class="event-description">Fue gracias a este curso donde pude aprender como funciona este genial sistema de control de versiones Git y GitHub. Adicional a este tengo el de desarrollo web y web responsive design</p>
+            <h3 class="event-title">Certificado de Git y GitHub</h3>
+            <p class="event-description">Git es un software de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando tienen un gran número de archivos de código fuente. Fue gracias a este curso donde pude aprender cómo funciona este genial sistema de control de versiones Git y GitHub. Aprendí a manejar ramas y hacer merge (para manejar distintas versiones del proyecto), commits, usar Git Bash (línea de comandos basada en linux), entender el flujo de trabajo en repositorios remotos, configurar llaves SSH para conectarme de manera segura al repositorio de GITHUB, hacer Pull requests a repositorios, usar tags y mucho más… </p>
             <a class="event-url" href="https://platzi.com/@willy-daconceicao-lozada/curso/git-github/diploma/" target="_blank">Ver certificado</a>
           </div>
         </article>
 
         <article class="event">
           <figure class="event-imageContainer">
-            <img class="event-image" src="images/proximamente.jpg" width="500" />
+            <img class="event-image certificado" src="images/fundamentos-js.PNG" width="500" />
           </figure>
           <div class="event-detail">
-            <h3 class="event-title">Proxima Meta Profesional</h3>
-            <p class="event-description">Próximamente</p>
-            <a class="event-url" href="#" target="_blank">No he puesto nada</a>
+            <h3 class="event-title">Fundamentos de JavaScript</h3>
+            <p class="event-description">JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos,  basado en prototipos, imperativo, débilmente tipado y dinámico. Yo anteriormente ya venía de otro lenguaje de programación que era Python así que se me hizo relativamente fácil conocer este nuevo lenguaje de programación, pude entender la programación orientada a objetos, el asincronismo de JavaScript (callbacks, promesas, async-await), bucles, condicionales, funciones, ect.</p>
+            <a class="event-url" href="https://platzi.com/@willy-daconceicao-lozada/curso/1339-fundamentos-javascript/diploma/detalle/" target="_blank">Ver certificado</a>
+          </div>
+        </article>
+
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image certificado" src="images/react-js.PNG" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">React.js</h3>
+            <p class="event-description">React.js es una biblioteca Javascript de código abierto diseñada para crear interfaces de usuario con el objetivo de facilitar el desarrollo de aplicaciones en una sola página (SPA apps). Es mantenido por Facebook, Es Declarativo y Basado en componentes, aprendí las bases de react desde como crear componentes, entender la estructura JSX, manejo de estado y levantamiento de estado, sobre React Router para crear SPA apps (páginas que no recargan), ciclos de vida de componentes Stateful, peticiones HTTP a un API, portales y el uso de Hooks en componentes funcionales. </p>
+            <a class="event-url" href="https://platzi.com/@willy-daconceicao-lozada/curso/1548-course/diploma/detalle/" target="_blank">Ver certificado</a>
           </div>
         </article>
       </div>
@@ -267,11 +302,11 @@
     <footer class="footer">
       <div class="container">
         <div>
-          <p>Curso de Desarrollo web online <img src="images/platzi.png" width="80" alt="platzi"></p>
+          <p>Desarrollador Web y Front-End dev 💻</p>
         </div>
         <div>
           <p>
-            Designed with &#129409; by <a href="https://twitter.com/thespianartist">@thespianartist</a>
+            Designed by <a href="https://twitter.com/thespianartist">@thespianartist</a> &#129409;
           </p>
         </div>
       </div>

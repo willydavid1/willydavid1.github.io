@@ -1130,6 +1130,10 @@ h2
     background-size: 40px 40px;
   }
 
+  .hoja-vida {
+    font-size: 40px !important;
+  }
+
 }
 
 /* todo lo que sea inferior a 320px o = va a ejecutar las reglas */
@@ -1284,4 +1288,15 @@ h2
 
 video {
   display: none;
+}
+
+.enlace-hv {
+    text-decoration: none;
+    color: white;
+    vertical-align: top;
+    margin: 0 10px;
+}
+
+.hoja-vida {
+  font-size: 50px;
 }

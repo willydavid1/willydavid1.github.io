@@ -556,18 +556,20 @@ box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.75);
 /* El button */
 .burger-button
 {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%; /* es el 50% de los 40px es como si le ponemos 20px */
-  background-color: rgb(0, 0, 0, 0.8); /* rgba(rojo, verde, azul, opacidad) de 0 -255 0 nada 255 todo de ese color la opacidad de 0 -1 donde 0 es transparente y 1 no es transparente si coloco 0.8 tengo un 20% de transparencia  */
-  display: none;
+  width: auto;
+  /* height: 40px; */
+  /*border-radius: 50%; /* es el 50% de los 40px es como si le ponemos 20px */
+  background-color: rgba(255, 255, 255, 0.8) ; /* rgba(rojo, verde, azul, opacidad) de 0 -255 0 nada 255 todo de ese color la opacidad de 0 -1 donde 0 es transparente y 1 no es transparente si coloco 0.8 tengo un 20% de transparencia  */
+  display: none ;
   line-height: 40px; /* alinea verticalmente */
   text-align: center; /* alinea horizontalmente */
   position: fixed;
   z-index: 4;
   left: 5px;
   top: 5px;
-  color: white; /* para cambiarle el color al icono */
+  padding: 10px 10px 6px;
+  border-radius: 10px;
+  /* color: white; para cambiarle el color al icono */
 }
 
 /* seccion de tecnologias */
@@ -879,7 +881,7 @@ h2
     display: flex;
     justify-content: center; /* centra de manera horizontal */
     align-items: center;
-    transition: .3s;
+    transition: .5s;
 
   }
 

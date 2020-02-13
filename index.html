@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/estilos.css">
     <meta name="description" content="Portafolio de Willy David Da Conceicao Lozada Front-End Web Developer. Proyectos, Habilidades, HTML5-CSS3-JS, Responsive Design, Programación Front-End. Y algo de Python ✌️"/>
     <meta name="keywords" content="portafolio willy david da conceicao, willy david daconceicao lozada, willy david da conceicao lozada, "/>
+    
+    <link rel="stylesheet" href="css/hamburguesa.css">
+
     <!-- <style>
       @media screen and (max-width: 768px) 
       {
@@ -36,7 +39,12 @@
   </head>
   <body>
 
-    <i class="icon-menu burger-button" id="burger-menu"></i>
+    <button id="burger-menu" class="burger-button hamburger" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <!-- <i class="icon-menu burger-button" id="burger-menu"></i> -->
 
 <div class="contenedor-video">
 
@@ -128,7 +136,9 @@
             <p class="project-description">En la creación de este proyecto implemente tecnologías como React.js – react-router – Uso de hooks para componentes funcionales- La aplicación es una SPA, Consumir una API para obtener indicadores económicos, Maquetación con el framework Bootstrap + estilos css propios y Web Responsive Design (adaptable a todos los dispositivos). </p>
           </div>
           <figure class="project-imageContainer">
-            <img class="project-image" width="500" src="images/willydavid1.github.io_proyecto-tasa-cambio_.png" alt="proyecto-react">
+            <a href="https://willydavid1.github.io/proyecto-tasa-cambio/">
+              <img class="project-image" width="500" src="images/willydavid1.github.io_proyecto-tasa-cambio_.png" alt="proyecto-react">
+            </a>
           </figure>
         </article>
 
@@ -236,6 +246,50 @@
             <a class="event-url" href="https://platzi.com/@willy-daconceicao-lozada/curso/1548-course/diploma/detalle/" target="_blank">Ver certificado</a>
           </div>
         </article>
+
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image certificado" src="images/reduxCertificado.PNG" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">Redux</h3>
+            <p class="event-description">Redux es una librería JavaScript de código abierto para el manejo del estado de una aplicación. Es comúnmente usada con otras librerías como React o Angular para la construcción de Interfaces de Usuario. </p>
+            <a class="event-url" href="https://platzi.com/@willy-daconceicao-lozada/curso/1613-redux/diploma/detalle/" target="_blank">Ver certificado</a>
+          </div>
+        </article>
+
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image certificado" src="images/nodejs.jpg" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">Node js</h3>
+            <p class="event-description">Node.js® es un entorno de ejecución para JavaScript construido con el motor de JavaScript V8 de Chrome. Modulos, Módulos preconstruidos en Nodejs como filesystem y OS), Asíncronismo, Modulo HTTP, NPM Node Package Manager (administrador de paquetes de node)</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=BhvLIzVL8_o" target="_blank">Ver Más</a>
+          </div>
+        </article>
+
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image certificado" src="images/expressCurso.webp" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">Express.js</h3>
+            <p class="event-description">Express.js, o simplemente Express, es un framework para Node.js, lanzado como software gratuito y de código abierto bajo la Licencia MIT. Está diseñado para crear aplicaciones web y API. Express Routing y MÉTODOS HTTP, Middlewares, Static Files Middleware, Settings y Motor de plantillas EJS</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=794Q71KVw1k&t=3606s" target="_blank">Ver Más</a>
+          </div>
+        </article>
+
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image certificado" src="images/proximamente.jpg" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">Próximamente</h3>
+            <p class="event-description">Bases de datos NoSQL (mongoDB), React native (para el desarrollo de aplicaciones móviles android y IOS), apps con stack MERN Próximamente</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=794Q71KVw1k&t=3606s" target="_blank">Mejorando a diario</a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -273,7 +327,7 @@
 
           <div class="lado-derecho-2item">
             <p class="estilos-p animated" data-animacion="parraforedux" id="animacion">Redux</p>
-            <p class="estilos-p animated" data-animacion="parrafopython" id="animacion">Python</p>
+            <p class="estilos-p animated" data-animacion="parrafopython" id="animacion">Node js</p>
           </div>
           
         </div>
@@ -336,10 +390,10 @@
       const burgerButton = document.querySelector('#burger-menu') //agarramos el menu mediante el id y lo almacenamos en variable
       
 
-      // llama a una funcion
+      // le añadimos un escuchador al media query list mandandole una validacion
       ipad.addListener(validation);
       
-
+      // recibimos el mediaqueryList y valida si la pantalla es inferior a 767px al boton le añado un escuchador de eventos que se llama cuando hagan click y si es falso la pantalla es mayor a 767px removemos ese escuchador de evento click
       function validation(event){
         if (event.matches){
           burgerButton.addEventListener('click', hideShow) //primer param que tipo de evento queremos escuchar y luego que queremos hacer con ese click
@@ -353,10 +407,14 @@
       {
         if (menu.classList.contains('is-active')){
           menu.classList.remove('is-active') //le quitamos al menu la clase
+          burgerButton.classList.remove("hamburger--elastic-r", "is-active") //le añade al boton una clase
         } else {
           menu.classList.add('is-active') //le añade al menu una clase
+          burgerButton.classList.add("hamburger--elastic", "is-active") //le añade al menu una clase
         } 
       }
+
+      // llamamos a validation() mandandole el mediaqueryList y este evalua si ponerle o no el evento de click
       validation(ipad);
 
       // animaciones

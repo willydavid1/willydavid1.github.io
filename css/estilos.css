@@ -343,6 +343,7 @@ figure {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0 8px;
 }
 
 .footer img {
@@ -370,9 +371,9 @@ figure {
   background: #f4fbff;
 
   /* sombras */
-  -webkit-box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 29px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 29px -10px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 29px -10px rgba(0,0,0,0.75);
 
 }
 .event-image {
@@ -604,6 +605,16 @@ box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.75);
   margin: 16px 32px ;
 }
 
+.cambio {
+  justify-content: space-around !important;
+  margin-top: 21px;
+}
+
+.cambio_derecho {
+  justify-content: space-around !important;
+  margin-bottom: 21px !important;
+}
+
 .estilos-p
 {
   background-color: #056fff;
@@ -655,7 +666,7 @@ box-shadow: 0px 0px 29px -12px rgba(0,0,0,0.75);
 {
   display: flex;
   justify-content: space-between;
-  margin: 16px 32px 0;
+  margin: 16px 32px;
 
 }
 
@@ -1059,7 +1070,7 @@ h2
 
   .lado-izquierdo-2item, .lado-derecho-2item
   {
-    margin: 1em 3em;
+    margin: 1em 2em;
   }
 
   .container-img

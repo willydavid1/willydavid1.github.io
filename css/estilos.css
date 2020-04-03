@@ -772,6 +772,7 @@ h2
 /* seccion hero */
   .hero
   {
+    margin-top: 45px;
     height: auto;
     position: relative;
     overflow: hidden;
@@ -844,6 +845,12 @@ h2
 
 }
 
+/* efecto de minificar el header
+.header_mini{
+  height: 70px;
+  transition: 1s;
+} */
+
   
   /* Botton */
   .burger-button
@@ -855,6 +862,10 @@ h2
   {
     display: block;
     height: auto;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 3;
   }
   .header ol 
   {

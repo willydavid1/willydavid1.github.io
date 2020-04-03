@@ -84,7 +84,7 @@
       <div class="container contenedor-video__hero">
         <h1 class="h1-hero animated fadeIn delay-1s">
           Hola! Soy <strong>Willy David</strong> <br/> 
-          Un <strong> aficionado </strong> a la tecnología, </br>
+          Un <strong> aficionado </strong> a la tecnología, <br/>
           Centrado en aprender <strong> a diario, </strong>
           <strong> Autodidacta </strong> y Programador Frontend JavaScript-React 
         </h1>
@@ -298,11 +298,33 @@
 
         <article class="event">
           <figure class="event-imageContainer">
+            <img class="event-image certificado" src="images/Mongo.png" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">Bases de datos y MongoDB</h3>
+            <p class="event-description">Primero aprendí los <a href="https://www.youtube.com/watch?v=GenX0Bvu8WY" target="_blank">fundamentos</a> en Bases de datos relacionales allí pude entender a los DBMS cuales hay, ACID, Modelado, relaciones entre tablas, normalización, peticiones SQL y muchas cosas más sobre DBS relacionales, pero igualmente practiqué con Bases de datos NoSQL como <a href="https://www.youtube.com/watch?v=lWMemPN9t6Q" target="_blank">mongoDB</a>, creando Colecciones, documentos y comandos desde la Mongo SHELL y desde allí realizando operaciones de tipo CRUD y conocer la interfaz de MongoDB Compass.</p>
+            <a class="event-url" href="https://github.com/willydavid1/mongoDB" target="_blank">Ver Más</a>
+          </div>
+        </article>
+
+        <article class="event">
+          <figure class="event-imageContainer">
+            <img class="event-image certificado" src="images/cssgrid.png" width="500" />
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">CSS Grid Layout</h3>
+            <p class="event-description">CSS Grid layout contiente funciones de diseño dirigidas a los desarrolladores de aplicaciones web. El CSS grid se puede utilizar para lograr muchos diseños diferentes. También se destaca por permitir dividir una página en áreas o regiones principales, por definir la relación en términos de tamaño, posición y capas entre partes de un control construido a partir de primitivas HTML.</p>
+            <a class="event-url" href="https://github.com/willydavid1/CSS-Grid-Layout" target="_blank">Ver Repo</a>
+          </div>
+        </article>
+
+        <article class="event">
+          <figure class="event-imageContainer">
             <img class="event-image certificado" src="images/proximamente.jpg" width="500" />
           </figure>
           <div class="event-detail">
             <h3 class="event-title">Próximamente</h3>
-            <p class="event-description">Bases de datos NoSQL (mongoDB), React native (para el desarrollo de aplicaciones móviles android y IOS), apps con stack MERN Próximamente</p>
+            <p class="event-description">React native, apps con stack MERN Próximamente</p>
             <a class="event-url" href="#tecnologias" target="">Mejorando a diario</a>
           </div>
         </article>
@@ -538,6 +560,22 @@
         observer.observe(element);
          
       });
+
+
+
+      // animaciones al hacer scroll
+      // window.onscroll = () => manejadorDeAnimaciones()
+
+      // const manejadorDeAnimaciones = () => {
+      //   // si el scroll es mayor a 50px ejecuta algo caso contrario no haces nada
+      //   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      //     // console.log(document.querySelector(".header"))
+      //     document.querySelector(".header").classList.add("header_mini")
+      //   } else {
+      //     console.log("esta antes de los 50px")
+      //     // document.getElementById("myP").className = "";
+      //   }
+      // }
 
 
 

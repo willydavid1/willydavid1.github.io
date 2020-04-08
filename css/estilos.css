@@ -357,9 +357,13 @@ figure {
 .event-list {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 .event-list-title {
   margin-left: 0;
+  position: sticky;
+  top: 40px;
+  z-index: 1;
 }
 /* cambiamos el tamaño fijo de ancho y margen */
 .event { 
@@ -707,12 +711,15 @@ h2
   position: absolute;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
-  
+  z-index: -1;
 }
 
 .h2-bloqueuno
 {
   left: -20px;
+  position: sticky;
+  top: 40px;
+  z-index: 1;
 }
 
 .bloque-uno,
@@ -721,6 +728,7 @@ h2
 {
   top: -10px;
   left: -29px;
+  transition: 1s;
 }
 
 
@@ -1317,4 +1325,33 @@ video {
 
 .hoja-vida {
   font-size: 50px;
+}
+
+.bloqueuno_alargado{
+  width: 80%;
+}
+
+.text-white{
+  color: white;
+  /* margin-left: -20px; */
+  transition:2s;
+}
+
+@media screen and (max-width: 767px) {
+  .event-list-title {
+    top: 85px;
+  }
+  .bloqueuno_alargado {
+    width: 100%;
+  }
+
+  .h2-bloqueuno{
+    top: 85px;
+    font-size: 18px;
+    margin-left: -20px;
+  }
+
+  .text-white{
+    margin-left: -20px;
+  }
 }

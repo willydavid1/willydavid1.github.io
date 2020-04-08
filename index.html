@@ -113,7 +113,7 @@
   <section id="portafolio" class="portfolio">
 
       <div class="container">
-        <h2 class="h2-bloqueuno"><div class="bloque bloque-uno"></div> Portafolio (Proyectos Destacados)</h2>
+        <h2 class="h2-bloqueuno"><div class="bloque bloque-uno" id="h2-bloqueuno"></div> Portafolio (Proyectos Destacados)</h2>
 
         <article class="project">
           <div class="project-details">
@@ -187,11 +187,13 @@
     </section>
 
 
-    <div class="container">
-      <h2 class="event-list-title"> <div class="bloque bloque-dos"></div> Más sobre mi experiencia</h2>
-    </div>
+    <!-- <div class="container">
+      <h2 class="event-list-title"> <div class="bloque bloque-dos" id="event-list-title"></div> Más sobre mi experiencia</h2>
+    </div> -->
 
     <section id="eventos" class="event-list">
+        <h2 class="event-list-title"> <div class="bloque bloque-dos" id="bloque-dos"></div> Más sobre mi experiencia</h2>
+
       <div class="container">
         
         <article class="event">
@@ -562,20 +564,37 @@
       });
 
 
-
       // animaciones al hacer scroll
-      // window.onscroll = () => manejadorDeAnimaciones()
+      window.onscroll = () => manejadorDeAnimaciones()
 
-      // const manejadorDeAnimaciones = () => {
-      //   // si el scroll es mayor a 50px ejecuta algo caso contrario no haces nada
-      //   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      //     // console.log(document.querySelector(".header"))
-      //     document.querySelector(".header").classList.add("header_mini")
-      //   } else {
-      //     console.log("esta antes de los 50px")
-      //     // document.getElementById("myP").className = "";
-      //   }
-      // }
+      const manejadorDeAnimaciones = () => {
+        console.log(document.documentElement.scrollTop)
+        
+        // si el scroll es mayor a 300px y menor o igual a 2850 ejecuta
+        if (document.body.scrollTop >= 300 && document.body.scrollTop <= 2850 || document.documentElement.scrollTop >= 300 && document.body.scrollTop <= 2850) {
+
+          document.querySelector(".h2-bloqueuno").classList.add("text-white")
+          document.querySelector("#h2-bloqueuno").classList.add("bloqueuno_alargado")
+          // console.log("mayor a 300px")
+
+        } else {
+          document.querySelector(".h2-bloqueuno").classList.remove("text-white")
+          document.querySelector("#h2-bloqueuno").classList.remove("bloqueuno_alargado")
+
+          console.log("esta antes de los 300px")
+        }
+
+        // si es top es mayor o igual a 2850
+        if (document.body.scrollTop >= 2750 || document.documentElement.scrollTop >= 2750) { 
+          document.querySelector(".event-list-title").classList.add("text-white")
+          document.querySelector("#bloque-dos").classList.add("bloqueuno_alargado")
+          // console.log("mayor a 2850")
+        } else {
+          document.querySelector(".event-list-title").classList.remove("text-white")
+          document.querySelector("#bloque-dos").classList.remove("bloqueuno_alargado")
+        } 
+
+      }
 
 
 

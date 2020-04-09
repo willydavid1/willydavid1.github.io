@@ -728,7 +728,7 @@ h2
 {
   top: -10px;
   left: -29px;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 
@@ -1334,24 +1334,23 @@ video {
 .text-white{
   color: white;
   /* margin-left: -20px; */
-  transition:2s;
+  /* transition:0.5s; */
 }
 
 @media screen and (max-width: 767px) {
   .event-list-title {
     top: 85px;
+    padding-left: 42px;
   }
   .bloqueuno_alargado {
-    width: 100%;
+    width: 100vw;
   }
 
   .h2-bloqueuno{
     top: 85px;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: -20px;
+    padding-left: 42px;
   }
 
-  .text-white{
-    margin-left: -20px;
-  }
 }

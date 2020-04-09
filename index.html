@@ -568,7 +568,7 @@
       window.onscroll = () => manejadorDeAnimaciones()
 
       const manejadorDeAnimaciones = () => {
-        console.log(document.documentElement.scrollTop)
+        // console.log(document.documentElement.scrollTop)
         
         // si el scroll es mayor a 300px y menor o igual a 2850 ejecuta
         if (document.body.scrollTop >= 300 && document.body.scrollTop <= 2850 || document.documentElement.scrollTop >= 300 && document.body.scrollTop <= 2850) {
@@ -581,7 +581,7 @@
           document.querySelector(".h2-bloqueuno").classList.remove("text-white")
           document.querySelector("#h2-bloqueuno").classList.remove("bloqueuno_alargado")
 
-          console.log("esta antes de los 300px")
+          // console.log("esta antes de los 300px")
         }
 
         // si es top es mayor o igual a 2850

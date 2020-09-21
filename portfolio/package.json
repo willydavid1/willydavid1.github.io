@@ -1,12 +1,14 @@
 {
+  "homepage":"https://willydavid1.github.io/willydavid1.github.io",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build  && next export",
     "start": "next start",
-    "generateStaticHTML": "next build && next export",
     "lint": "eslint . --fix"
   },
   "dependencies": {
@@ -23,6 +25,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^3.1.0"
   }
 }

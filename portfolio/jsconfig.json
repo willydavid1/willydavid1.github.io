@@ -1,5 +1,0 @@
-{
-  "compilerOptions": {
-    "baseUrl": "./src/" // desde donde tienes que empezar para rutas absolutas
-  }
-}

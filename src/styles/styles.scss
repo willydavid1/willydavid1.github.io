@@ -1255,14 +1255,13 @@ h2
   font-size: 50px;
 }
 
-.bloqueuno_alargado{
+.active_bar{
   width: 80%;
 }
 
 .text-white{
   color: white;
-  /* margin-left: -20px; */
-  /* transition:0.5s; */
+  transition: $transition-default;
 }
 
 @media screen and (max-width: 767px) {
@@ -1270,7 +1269,7 @@ h2
     top: 85px;
     padding-left: 42px;
   }
-  .bloqueuno_alargado {
+  .active_bar {
     width: 100vw;
   }
 

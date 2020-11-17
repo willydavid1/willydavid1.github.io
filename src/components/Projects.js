@@ -1,22 +1,22 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import throttle from 'lodash/throttle'
 export function Projects () {
+  const [activeFirstBar, setActiveFirstBar] = useState(false)
+  const [activeSecondBar, setActiveSecondBar] = useState(false)
+
   useEffect(() => {
-    window.onscroll = () => handlerScroll()
+    window.onscroll = throttle(() => handlerScroll(), 250)
     const handlerScroll = () => {
       if ((document.body.scrollTop >= 300 && document.body.scrollTop <= 2850) || (document.documentElement.scrollTop >= 300 && document.body.scrollTop <= 2850)) {
-        document.querySelector('.h2-bloqueuno').classList.add('text-white')
-        document.querySelector('#h2-bloqueuno').classList.add('bloqueuno_alargado')
+        setActiveFirstBar(true)
       } else {
-        document.querySelector('.h2-bloqueuno').classList.remove('text-white')
-        document.querySelector('#h2-bloqueuno').classList.remove('bloqueuno_alargado')
+        setActiveFirstBar(false)
       }
 
       if (document.body.scrollTop >= 2750 || document.documentElement.scrollTop >= 2750) {
-        document.querySelector('.event-list-title').classList.add('text-white')
-        document.querySelector('#bloque-dos').classList.add('bloqueuno_alargado')
+        setActiveSecondBar(true)
       } else {
-        document.querySelector('.event-list-title').classList.remove('text-white')
-        document.querySelector('#bloque-dos').classList.remove('bloqueuno_alargado')
+        setActiveSecondBar(false)
       }
     }
   }, [])
@@ -26,7 +26,7 @@ export function Projects () {
       <section id="portafolio" className="portfolio">
 
         <div className="container">
-          <h2 className="h2-bloqueuno"><div className="bloque bloque-uno" id="h2-bloqueuno"></div> Portafolio (Proyectos Destacados)</h2>
+          <h2 className={`h2-bloqueuno ${activeFirstBar ? 'text-white' : ''}`}><div className={`bloque bloque-uno ${activeFirstBar ? 'active_bar' : ''}`}></div> Portafolio (Proyectos Destacados)</h2>
 
           <article className="project animated" id="animacion" data-animacion="project-juego">
             <div className="project-details">
@@ -115,7 +115,7 @@ export function Projects () {
       </section>
 
       <section id="exp" className="event-list">
-        <h2 className="event-list-title"> <div className="bloque bloque-dos" id="bloque-dos"></div> Más sobre mi experiencia</h2>
+        <h2 className={`event-list-title ${activeSecondBar ? 'text-white' : ''}`}> <div className={`bloque bloque-dos ${activeSecondBar ? 'active_bar' : ''}`}></div> Más sobre mi experiencia</h2>
 
         <div className="container">
 

@@ -48,8 +48,8 @@ const Projects = () => {
   }, [inView]);
 
   return (
-    <div className="mb-8">
-      <h2 className="text-2xl mb-2 pl-4">Projects</h2>
+    <section className="mt-8 mb-8" id="projects">
+      <h2 className="text-3xl mb-3 font-semibold text-center px-4 md:text-left">Projects</h2>
       <p className="px-4 text-sm">
         Here are some of the projects that I have developed in my free time.
         Some projects have been successful and others have been failures, but
@@ -126,7 +126,7 @@ const Projects = () => {
           }
         `}
       </style>
-    </div>
+    </section>
   );
 };
 

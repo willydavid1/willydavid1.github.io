@@ -19,15 +19,6 @@ const Footer = () => {
           <li>
             <a
               rel="noopener noreferrer"
-              href="https://www.instagram.com/willydavid1/"
-              target="_blank"
-            >
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a
-              rel="noopener noreferrer"
               href="https://github.com/willydavid1"
               target="_blank"
             >
@@ -46,7 +37,7 @@ const Footer = () => {
           <li>
             <a
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/willy-david-da-conceicao-lozada-355799184/"
+              href="https://www.linkedin.com/in/willy-david-da-conceicao-355799184/"
               target="_blank"
             >
               Linkedin

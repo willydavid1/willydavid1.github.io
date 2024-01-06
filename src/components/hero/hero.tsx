@@ -10,10 +10,7 @@ const Hero = () => {
       <div>
         <Animation in delay={200}>
           <h1 className="text-3xl font-semibold">
-            Hello World! <br />{" "}
-            <span className="text-xl">
-              I&apos;m Willy David, a technology enthusiast.
-            </span>
+            ¿Quién es Willy David Da Conceicao? <br />
           </h1>
         </Animation>
 
@@ -28,7 +25,7 @@ const Hero = () => {
           }}
         >
           <a
-            href="#projects"
+            href="#biography"
             type="button"
             className="text-white mt-4 flex items-center justify-center w-full bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
           >
@@ -67,8 +64,9 @@ const Hero = () => {
                 "Backend",
                 "Code",
                 "AI",
+                "Blockchain",
                 "Apps",
-                "Servers",
+                "Crypto",
                 "3D Modeling",
                 "Serverless",
                 "Python",

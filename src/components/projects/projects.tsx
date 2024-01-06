@@ -48,17 +48,11 @@ const Projects = () => {
   }, [inView]);
 
   return (
-    <section className="mt-8 mb-8" id="projects">
-      <h2 className="text-3xl mb-3 font-semibold text-center px-4 md:text-left">Projects</h2>
-      <p className="px-4 text-sm">
-        Here are some of the projects that I have developed in my free time.
-        Some projects have been successful and others have been failures, but
-        the important thing is that I have learned and gained a lot of
-        experience in the process. My curiosity to always take risks and try
-        something new is something that I enjoy doing. Experimenting with new
-        technologies, learning new things, and working on innovative projects is
-        something that I love to do.
-      </p>
+    <section className="mt-12 mb-8" id="projects">
+      <h2 className="text-3xl mb-3 font-semibold text-center px-4 md:text-left">
+        Proyectos
+      </h2>
+
       <div
         className="section relative flex flex-nowrap overflow-x-scroll space-x-6 py-6 px-4"
         ref={ref}

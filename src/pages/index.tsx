@@ -1,11 +1,14 @@
+// Libs
 import { Open_Sans } from "next/font/google";
+import Head from "next/head";
 
+// Components
+import Biography from "@/components/biography/biography";
+import Experience from "@/components/experience/experience";
+import Footer from "@/components/footer/footer";
 import Hero from "@/components/hero/hero";
 import Projects from "@/components/projects/projects";
-import Experience from "@/components/experience/experience";
 import Skills from "@/components/skills/skills";
-import Head from "next/head";
-import Footer from "@/components/footer/footer";
 
 const openSansFont = Open_Sans({
   subsets: ["latin"],
@@ -28,6 +31,7 @@ export default function Home() {
         </Head>
 
         <Hero />
+        <Biography />
         <Projects />
         <Experience />
         <Skills />

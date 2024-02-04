@@ -27,9 +27,28 @@ const Hero = () => {
           <a
             href="#biography"
             type="button"
-            className="text-white mt-4 flex items-center justify-center w-full bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            className="text-white mt-4 flex items-center justify-center w-full bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 font-medium rounded-xl text-sm px-5 py-2.5 text-center mr-2 mb-2"
           >
-            Learn more about Willy
+            Ver más sobre Willy
+            <HiOutlineArrowNarrowRight className="ml-3 text-lg" />
+          </a>
+        </Animation>
+        <Animation
+          in
+          delay={800}
+          from={{
+            transform: "translateY(50px)",
+          }}
+          to={{
+            transform: "translateY(0px)",
+          }}
+        >
+          <a
+            href="#projects"
+            type="button"
+            className="text-white mt-4 flex items-center justify-center w-full border focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-xl text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            Ver proyectos
             <HiOutlineArrowNarrowRight className="ml-3 text-lg" />
           </a>
         </Animation>

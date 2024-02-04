@@ -22,10 +22,10 @@ export default function Home() {
         className={`min-h-screen container max-w-4xl mx-auto ${openSansFont.className} font-opensans`}
       >
         <Head>
-          <title>Willy David Da Conceicao - Portfolio 🚀</title>
+          <title>Willy David Da Conceicao - Portafolio 🚀</title>
           <meta
             name="description"
-            content="Willy David Da Conceicao Lozada's portfolio showcases my projects, experience, and skills. Get to know who I am and my projects."
+            content="Portafolio de Willy David Da Conceicao Lozada destaca proyectos, experiencia y habilidades. Conoce quién soy y mis proyectos."
           />
           <link rel="icon" type="image/png" href="/images/logoWilly.png" />
         </Head>

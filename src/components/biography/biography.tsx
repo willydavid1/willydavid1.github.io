@@ -20,7 +20,7 @@ const Biography = () => {
           >
             burbuja puntocom <HiOutlineExternalLink className="ml-1" />
           </a>{" "}
-          Hoy vive entre Bogotá y cualquier parte del mundo como nómada digital.
+          Hoy vive en Bogotá, Colombia, como nómada digital.{" "}
         </p>
 
         <div className="grid gap-4 mx-4 sm:grid-cols-12">
@@ -99,20 +99,23 @@ const Biography = () => {
               </div>
 
               <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-blue-400">
-                <p className="">
-                  Le interesaba mucho el tema de desarrollo móvil (apps) y
-                  modelos 3D tanto que en 2 meses aprendio utilizar blender
-                  completo un curso de
-                  <a
-                    href="https://platzi.com/p/willydaconceicao/curso/2789-blender/diploma/detalle/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    className="pl-1 text-blue-300 underline items-center justify-center inline-flex"
-                  >
-                    Modelado 3D usando Blender{" "}
-                    <HiOutlineExternalLink className="ml-1" />
-                  </a>{" "}
-                  Con ese mismo conocimiento, fundó 3 proyectos:
+                <div>
+                  <p>
+                    Le interesaba mucho el tema de desarrollo móvil (apps) y
+                    modelos 3D tanto que en 2 meses aprendio utilizar blender
+                    completo un curso de
+                    <a
+                      href="https://platzi.com/p/willydaconceicao/curso/2789-blender/diploma/detalle/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="pl-1 text-blue-300 underline items-center justify-center inline-flex"
+                    >
+                      Modelado 3D usando Blender{" "}
+                      <HiOutlineExternalLink className="ml-1" />
+                    </a>{" "}
+                    Con ese mismo conocimiento, fundó 3 proyectos:
+                  </p>
+
                   <ul className="list-disc pl-12 pt-1">
                     <li>
                       <b>Giraffes 3D:</b> Fue un proyecto NFT creado con Blender
@@ -149,22 +152,8 @@ const Biography = () => {
                       realidad aumentada y realidad virtual. Innovamos y
                       mejoramos la experiencia del usuario con una entrega en
                       minutos, cambiando la forma de hacer pedidos. (Foodko
-                      fracasó a los 4 meses) Vendimos muchas hamburguesas;
-                      alcanzo a recordar que fueron más de 150 hamburguesas en
-                      esos 4 meses. Teníamos buena retención de usuarios (40%
-                      nos volvían a comprar) <br />
-                      Aunque decidimos cerrar operaciones dado que competir
-                      contra los grandes fue muy difícil para nosotros. Tenían
-                      buena parte del mercado acaparado + la competencia que era
-                      brutal. Créeme, no sabes lo jodido que es operar una
-                      cocina oculta, sin duda felicito a todas las cadenas de
-                      restaurantes (en especial cuando reciben 10 órdenes
-                      simultáneamente) <br />
-                      Aprendí que armar un cohete espacial sin antes validar la
-                      idea me costó dinero y tiempo, aunque no me arrepiento
-                      dado que este error me motivó a leerme el libro &quot;El
-                      método LEAN STARTUP&quot; de Eric Ries. Quién sabe, tal
-                      vez en el futuro ejecute un pivote y vuelva
+                      fracasó a los 4 meses) Aprendí que armar un cohete
+                      espacial sin antes validar la idea
                       <a
                         href="https://neat-maple-aedd3.netlify.app/"
                         rel="noopener noreferrer"
@@ -176,7 +165,7 @@ const Biography = () => {
                       </a>
                     </li>
                   </ul>
-                </p>
+                </div>
               </div>
 
               <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-blue-400">

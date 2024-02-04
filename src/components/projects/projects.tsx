@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { RefObject, useRef } from "react";
 import Image from "next/image";
 import { useSpring, animated } from "@react-spring/web";
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import {
+  HiOutlineArrowNarrowLeft,
+  HiOutlineArrowNarrowRight,
+  HiOutlineExternalLink,
+} from "react-icons/hi";
 import { useScroll } from "react-use-gesture";
 import clsx from "clsx";
 import { Animation } from "../animations/animation";
-import { useInView } from "react-intersection-observer";
 
 const Projects = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-  });
-  const [itemSelected, setItemSelected] = useState({
-    item: null,
-    index: -1,
-  });
+  const refLastItem = useRef();
+  const refFirstItem = useRef();
+
   const [style, set] = useSpring(() => ({
     transform: "perspective(500px) rotateY(0deg)",
   }));
@@ -35,78 +34,107 @@ const Projects = () => {
     });
   });
 
-  const handleSelectItem = (data: any) => {
-    setItemSelected(data);
+  const getRefItem = (
+    index: number,
+    length: number
+  ): RefObject<any> | undefined => {
+    if (index === 0) {
+      return refFirstItem;
+    }
+    if (index === length - 1) {
+      return refLastItem;
+    }
+    return undefined;
   };
 
-  useEffect(() => {
-    if (inView) {
-      setTimeout(() => {
-        handleSelectItem({ item: items[0], index: 0 });
-      }, 3000);
-    }
-  }, [inView]);
-
   return (
-    <section className="mt-12 mb-8" id="projects">
+    <section className="mt-12 mb-8 scroll-m-12" id="projects">
       <h2 className="text-3xl mb-3 font-semibold text-center px-4 md:text-left">
         Proyectos
       </h2>
 
-      <div
-        className="section relative flex flex-nowrap overflow-x-scroll space-x-6 py-6 px-4"
-        ref={ref}
-        {...bind()}
-      >
-        {items.map((item, i) => {
-          const isActive = itemSelected.index === i;
-          return (
-            <animated.div
-              key={i}
-              style={style}
-              className={clsx(
-                "flex-shrink-0 rounded-3xl overflow-hidden relative cursor-pointer md:flex",
-                {}
-              )}
-              onClick={() => handleSelectItem({ item, index: i })}
-            >
-              <div className="relative">
-                <Image
-                  width={208}
-                  height={208}
-                  src={item.imageSrc}
-                  alt={`icon ${item.title}`}
-                />
+      <div className="relative">
+        <div
+          className="section relative flex flex-nowrap overflow-x-scroll space-x-6 py-6 px-12 md:px-0"
+          {...bind()}
+        >
+          {items.map((item, i) => {
+            return (
+              <animated.div
+                key={i}
+                style={style}
+                className={clsx(
+                  "flex-shrink-0 h-fit rounded-3xl overflow-hidden relative md:flex",
+                  {}
+                )}
+                ref={getRefItem(i, items.length)}
+              >
+                <div className="relative">
+                  <Image
+                    width={208}
+                    height={208}
+                    src={item.imageSrc}
+                    alt={`icon ${item.title}`}
+                  />
 
-                <p className="absolute bottom-2.5 right-2 flex items-center justify-center rounded-xl bg-white px-2 py-1 text-xs font-bold text-main">
-                  {item.title}
-                  {!isActive && (
-                    <HiOutlineArrowNarrowRight className="ml-1 text-xl" />
-                  )}
-                </p>
-              </div>
-              {isActive && (
+                  <p className="absolute bottom-2.5 right-2 flex items-center justify-center rounded-xl bg-white px-2 py-1 text-xs font-bold text-main">
+                    {item.title}
+                  </p>
+                </div>
                 <Animation
                   in
                   className="bg-white p-3 w-52 text-main relative md:w-72"
                 >
                   <p className="text-xs mb-2 md:text-xs">{item.description}</p>
                   <div className="md:flex md:items-end md:justify-end">
-                    <p className="bg-yellow-500 text-black text-xs p-1 px-5 rounded-full inline uppercase font-semibold">
-                      {item.label}
-                    </p>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href={item.href}
+                      className="flex items-center justify-center bg-blue-100 text-blue-600 underline text-xs p-1 px-5 rounded-full uppercase font-semibold"
+                    >
+                      Ver Sitio <HiOutlineExternalLink className="ml-1" />
+                    </a>
                   </div>
                 </Animation>
-              )}
-            </animated.div>
-          );
-        })}
+              </animated.div>
+            );
+          })}
+        </div>
+        <button
+          className="border border-main shadow-sm absolute bg-white rounded-full h-8 w-8 flex items-center justify-center top-1/2 transform -translate-y-1/2 left-1 lg:-left-7"
+          onClick={() => {
+            (refFirstItem.current as any).scrollIntoView({
+              behavior: "smooth",
+              block: "nearest",
+              inline: "center",
+            });
+          }}
+        >
+          <HiOutlineArrowNarrowLeft className="text-xl text-main" />
+        </button>
+        <button
+          className="border border-main shadow-sm  absolute bg-white rounded-full h-8 w-8 flex items-center justify-center top-1/2 transform -translate-y-1/2 right-1 lg:-right-7"
+          onClick={() => {
+            (refLastItem.current as any).scrollIntoView({
+              behavior: "smooth",
+              block: "nearest",
+              inline: "center",
+            });
+          }}
+        >
+          <HiOutlineArrowNarrowRight className="text-xl text-main" />
+        </button>
       </div>
 
       <style jsx>
         {`
           .section::-webkit-scrollbar {
-            height: 11px;
+            height: 25px;
+          }
+
+          .section {
+            overflow-y: hidden;
           }
 
           .section::-webkit-scrollbar-track {
@@ -129,50 +157,57 @@ const items = [
     imageSrc: "/images/projects/foodko.jpg",
     title: "Foodko",
     description:
-      "Foodko.co is an application that allows you to order and customize your food in 3D for home delivery within minutes. You can also be part of the metaverse and NFTs with Foodko by creating and collecting digital burgers. Foodko offers a new and amazing consumer experience by giving you the power to customize your burgers in a real-time 3D model.",
+      "Foodko.co es una app que te permite pedir y personalizar tu comida en 3D para entrega a domicilio en cuestión de minutos. Foodko ofrece una experiencia de consumo nueva y sorprendente al brindarle el poder de personalizar sus hamburguesas en un modelo 3D en tiempo real.",
     label: "App - Web",
+    href: "https://neat-maple-aedd3.netlify.app/",
   },
   {
     imageSrc: "/images/projects/picassoIA.jpg",
     title: "Picasso IA",
     description:
-      "Picassoia.com is the Netflix of AI, all AIs in one app, it's an app that offers an AI-powered image generator. You can create works of art or converse with famous people using the power of AI. You just have to write a text and see what the AI draws for you.",
+      "Picassoia.com es el Netflix de la IA, todas las IA en una sola aplicación, es una aplicación que ofrece un generador de imágenes impulsado por IA. Puedes crear obras de arte o conversar con personajes famosos utilizando el poder de la IA. Sólo tienes que escribir un texto y ver qué dibuja la IA por ti.",
     label: "App - Web",
+    href: "https://picassoia.com/",
   },
   {
     imageSrc: "/images/projects/saxior.jpg",
     title: "Saxior",
     description:
-      "Saxior.com is an app that is revolutionizing the way we buy clothes with artificial intelligence. With Saxior, you can buy a t-shirt with your favorite and unique design created with artificial intelligence.",
+      "Saxior.com es una app que está revolucionando la forma de comprar ropa con inteligencia artificial. Con Saxior podrás comprar una camiseta con tu diseño favorito y único creado con inteligencia artificial.",
     label: "App - Web",
+    href: "http://saxior.com/",
   },
   {
     imageSrc: "/images/projects/peaceAI.jpg",
     title: "Peace AI",
     description:
-      "Peace IA is an app that offers a wide selection of natural and AI-generated relaxing sounds to reduce stress and anxiety. It also provides personalized advice and exercises from AI mental health professionals and athletes to improve emotional and physical well-being, as well as motivational phrases and meditation tools.",
+      "Peace IA es una aplicación que ofrece una amplia selección de sonidos relajantes naturales y generados por IA para reducir el estrés y la ansiedad. También proporciona consejos personalizados y ejercicios de profesionales de la salud mental y deportistas de IA para mejorar el bienestar emocional y físico, así como frases motivadoras y herramientas de meditación.",
     label: "App",
+    href: "https://play.google.com/store/apps/details?id=com.peaceai.app",
   },
   {
     imageSrc: "/images/projects/rostroIA.jpg",
     title: "Rostro IA",
     description:
-      "Rostro IA is an app that uses advanced AI algorithms to generate unique and highly detailed artwork from any image, allowing you to become a digital artist, create anime avatars, fantasy scenes, NFT art, and more in seconds. You can also share your creations with a community of artists.",
+      "Rostro IA es una aplicación que utiliza algoritmos avanzados de IA para generar obras de arte únicas y muy detalladas a partir de cualquier imagen, lo que te permite convertirte en un artista digital, crear avatares de anime, escenas de fantasía, arte NFT y más en segundos. También puedes compartir tus creaciones con una comunidad de artistas.",
     label: "App",
+    href: "https://play.google.com/store/apps/details?id=com.lunaai.app",
   },
   {
     imageSrc: "/images/projects/giraffes-nfts.jpg",
     title: "Giraffes 3d",
     description:
-      "Giraffes 3d is an NFT collection created from scratch using Blender to model each of the 3D objects and textures for the giraffes. Then each 3D element and texture was rendered to generate as a final result each giraffe with a unique design.",
+      "Giraffes 3d es una colección NFT creada desde cero usando Blender para modelar cada uno de los objetos y texturas 3D de las jirafas. Luego se renderizó cada elemento 3D y textura para generar como resultado final cada jirafa con un diseño único.",
     label: "NFT collection",
+    href: "https://opensea.io/collection/giraffes3d",
   },
   {
     imageSrc: "/images/projects/koalastv.gif",
     title: "Koalas tv",
     description:
-      "Koalas tv is an NFT collection created from scratch using Blender to model each of the 3D objects and textures for the giraffes. Then each 3D element and texture was rendered to generate as a final result each koala with a unique design.",
+      "Koalas tv es una colección NFT creada desde cero usando Blender para modelar cada uno de los objetos 3D y texturas de las jirafas. Luego se renderizó cada elemento 3D y textura para generar como resultado final cada koala con un diseño único.",
     label: "NFT collection",
+    href: "https://opensea.io/collection/koalastv",
   },
 ];
 

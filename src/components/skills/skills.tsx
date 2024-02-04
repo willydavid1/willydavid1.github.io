@@ -4,7 +4,7 @@ const Skills = () => {
   return (
     <section className="mt-8 mb-8" id="projects">
       <h2 className="text-3xl mb-6 font-semibold text-center px-4 md:text-left">
-        Skills
+        Habilidades
       </h2>
 
       <div className="space-y-8 px-4">

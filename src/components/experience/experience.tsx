@@ -9,9 +9,9 @@ const Experience = () => {
         <div className="grid gap-4 sm:grid-cols-12">
           <div className="col-span-12 sm:col-span-4">
             <div className="text-center sm:text-left mb-14">
-              <h2 className="text-3xl mb-2 font-semibold">Experience</h2>
+              <h2 className="text-3xl mb-2 font-semibold">Experiencia</h2>
               <span className="text-sm font-bold uppercase tracking-wider text-gray-400">
-                {"<Professional Experience />"}
+                {"<Experiencia Profesional />"}
               </span>
             </div>
           </div>

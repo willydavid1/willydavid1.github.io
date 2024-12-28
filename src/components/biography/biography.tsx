@@ -10,8 +10,9 @@ const Biography = () => {
 
       <div className="px-4">
         <p className="mb-5">
-          Willy David Da Conceicao Nacio en Venezuela justo cuando ocurria el
-          crash de la
+          ¡Hola! Soy Willy David Da Conceicao, desarrollador frontend y
+          apasionado por la tecnología. Nací en Venezuela durante la ocurrencia
+          de la
           <a
             href="https://chat.openai.com/share/ec8c0a55-2990-4f0a-97d9-743916d87af1"
             rel="noopener noreferrer"
@@ -19,8 +20,16 @@ const Biography = () => {
             className="pl-1 text-blue-300 underline items-center justify-center inline-flex"
           >
             burbuja puntocom <HiOutlineExternalLink className="ml-1" />
-          </a>{" "}
-          Hoy vive en Bogotá, Colombia, como nómada digital.{" "}
+          </a>
+          . Soy un autodidacta comprometido con el aprendizaje continuo y me
+          encanta leer sobre una variedad de temas. Tengo experiencia en
+          desarrollo web, construyendo software con React y otras tecnologías.
+          Aunque mi especialidad es el frontend, también tengo habilidades en
+          backend y en el desarrollo de aplicaciones móviles híbridas. Me
+          interesa el modelado 3D y actualmente estoy incursionando en el
+          desarrollo de videojuegos. Siempre busco aprender nuevas cosas que me
+          apasionan. Me encantan los desafíos y disfruto creando código
+          escalable.
         </p>
 
         <div className="grid gap-4 mx-4 sm:grid-cols-12">

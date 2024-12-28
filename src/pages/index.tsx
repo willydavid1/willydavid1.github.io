@@ -42,6 +42,24 @@ export default function Home() {
         <Biography />
         <Projects />
         <Experience />
+        <div className="mb-12 scroll-m-12" id="iframeChatbotPicassoia">
+          <h2 className="text-3xl mb-6 font-semibold text-center px-4 md:text-left">
+            Chatea conmigo
+          </h2>
+
+          <div
+            id="iframeChatbotPicassoia"
+            className="rounded-3xl overflow-hidden"
+          >
+            <iframe
+              src="https://picassoia.com/chatbot-iframe?uid=yxbtT8Bq6neUZwO1NxwUz5ADx8q2&chatbot_id=13360cf7-351d-4427-87f4-0644de85c88f"
+              width="100%"
+              style={{ height: "100%", minHeight: 700 }}
+              frameBorder={0}
+            />
+          </div>
+        </div>
+
         <Skills />
       </main>
       <Footer />

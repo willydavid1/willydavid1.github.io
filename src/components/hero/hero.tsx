@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+import { FaInfoCircle } from "react-icons/fa";
 import { Animation } from "../animations/animation";
 
 const Hero = () => {
@@ -46,11 +47,34 @@ const Hero = () => {
           <a
             href="#projects"
             type="button"
-            className="text-white mt-4 flex items-center justify-center w-full border focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-xl text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            className="hover:bg-white hover:text-main transition-colors text-white mt-4 flex items-center justify-center w-full border focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-xl text-sm px-5 py-2.5 text-center mr-2 mb-2"
           >
             Ver proyectos
             <HiOutlineArrowNarrowRight className="ml-3 text-lg" />
           </a>
+        </Animation>
+        <Animation
+          in
+          delay={900}
+          from={{
+            transform: "translateY(50px)",
+          }}
+          to={{
+            transform: "translateY(0px)",
+          }}
+        >
+          <a
+            href="#iframeChatbotPicassoia"
+            type="button"
+            className="hover:bg-white hover:text-main transition-colors text-white mt-4 flex items-center justify-center w-full border focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-xl text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            Chatbot IA con datos de Willy
+            <HiOutlineArrowNarrowRight className="ml-3 text-lg" />
+          </a>
+          <p className="text-xs flex items-center text-gray-400">
+            <FaInfoCircle className="mr-2" />
+            Chatbot IA entrenado con datos de Willy de este portafolio.
+          </p>
         </Animation>
       </div>
 

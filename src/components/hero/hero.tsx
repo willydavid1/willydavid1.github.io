@@ -64,7 +64,7 @@ const Hero = () => {
           }}
         >
           <a
-            href="#iframeChatbotPicassoia"
+            href="#rag"
             type="button"
             className="hover:bg-white hover:text-main transition-colors text-white mt-4 flex items-center justify-center w-full border focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-xl text-sm px-5 py-2.5 text-center mr-2 mb-2"
           >

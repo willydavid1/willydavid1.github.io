@@ -1,6 +1,8 @@
 // Libs
 import { Open_Sans } from "next/font/google";
 import Head from "next/head";
+import { FaInfoCircle } from "react-icons/fa";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 // Components
 import Biography from "@/components/biography/biography";
@@ -42,21 +44,37 @@ export default function Home() {
         <Biography />
         <Projects />
         <Experience />
-        <div className="mb-12 scroll-m-12" id="iframeChatbotPicassoia">
-          <h2 className="text-3xl mb-6 font-semibold text-center px-4 md:text-left">
+        <div className="mb-12 scroll-m-12" id="rag">
+          <h2 className="text-3xl mb-6 font-semibold text-center md:text-left">
             Chatea conmigo
           </h2>
 
           <div
             id="iframeChatbotPicassoia"
-            className="rounded-3xl overflow-hidden"
+            className="rounded-3xl overflow-hidden max-w-xl h-[500px] mx-auto"
           >
             <iframe
               src="https://picassoia.com/chatbot-iframe?uid=yxbtT8Bq6neUZwO1NxwUz5ADx8q2&chatbot_id=13360cf7-351d-4427-87f4-0644de85c88f"
               width="100%"
-              style={{ height: "100%", minHeight: 700 }}
+              style={{ height: "100%" }}
               frameBorder={0}
             />
+          </div>
+
+          <div className="flex items-center justify-center mt-4">
+            <FaInfoCircle className="mr-2 text-gray-400" />
+            <p className="text-gray-400">
+              Creado con
+              <a
+                href="https://picassoia.com/generator/en/business"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="pl-1 text-blue-300 underline items-center justify-center inline-flex"
+              >
+                Picasso IA para empresas
+                <HiOutlineExternalLink className="ml-1" />
+              </a>
+            </p>
           </div>
         </div>
 

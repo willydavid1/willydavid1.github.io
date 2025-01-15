@@ -12,6 +12,7 @@ import Hero from "@/components/hero/hero";
 import Projects from "@/components/projects/projects";
 import Skills from "@/components/skills/skills";
 import Script from "next/script";
+import ProfessionalCertifications from "@/components/professionalCertifications/professionalCertifications";
 
 const openSansFont = Open_Sans({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function Home() {
 
         <Hero />
         <Biography />
+        <ProfessionalCertifications />
         <Projects />
         <Experience />
         <div className="mb-12 scroll-m-12" id="rag">

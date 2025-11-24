@@ -161,14 +161,14 @@ const items = [
     label: "App - Web",
     href: "https://neat-maple-aedd3.netlify.app/",
   },
-  {
-    imageSrc: "/images/projects/picassoIA.jpg",
-    title: "Picasso IA",
-    description:
-      "Picassoia.com es el Netflix de la IA, todas las IA en una sola aplicación, es una aplicación que ofrece un generador de imágenes impulsado por IA. Puedes crear obras de arte o conversar con personajes famosos utilizando el poder de la IA. Sólo tienes que escribir un texto y ver qué dibuja la IA por ti.",
-    label: "App - Web",
-    href: "https://picassoia.com/",
-  },
+  // {
+  //   imageSrc: "/images/projects/picassoIA.jpg",
+  //   title: "Picasso IA",
+  //   description:
+  //     "Picassoia.com es el Netflix de la IA, todas las IA en una sola aplicación, es una aplicación que ofrece un generador de imágenes impulsado por IA. Puedes crear obras de arte o conversar con personajes famosos utilizando el poder de la IA. Sólo tienes que escribir un texto y ver qué dibuja la IA por ti.",
+  //   label: "App - Web",
+  //   href: "https://picassoia.com/",
+  // },
   {
     imageSrc: "/images/projects/saxior.jpg",
     title: "Saxior",

@@ -37,16 +37,7 @@ const Biography = () => {
             <div className="col-span-12 space-y-12 relative sm:px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-700">
               <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-blue-400">
                 <p className="">
-                  A los 16 años, creó su primera empresa: una compañía que se
-                  encargaba de reciclar aparatos electrónicos como computadoras
-                  y celulares que se iban a desechar. Fue un negocio ambiental
-                  que desarrolló con la ayuda de sus padres. La innovación
-                  residía en usar tecnología para incentivar a las empresas y a
-                  las personas a darle un buen manejo a sus equipos. Dos años
-                  después, cerró debido a la situación del país. Logró tener un
-                  equipo de más de tres trabajadores y más de 500 contactos,
-                  reciclando más de 2800 computadoras y contribuyendo al cuidado
-                  del medio ambiente.
+                  A los 16 años, inició un proyecto ambiental de reciclaje de electrónicos con ayuda de sus padres, mientras aprendía fundamentos de programación, HTML y CSS. Como diferenciador, utilizó software para incentivar y facilitar el manejo responsable de aparatos, logrando reciclar más de 2,800 computadoras antes de finalizar dos años después por la situación del país.
                 </p>
               </div>
               <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-blue-400">
@@ -177,7 +168,7 @@ const Biography = () => {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-blue-400">
+              {/* <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-blue-400">
                 <p>
                   A los 21 años, fundó
                   <a
@@ -203,7 +194,7 @@ const Biography = () => {
                   </a>{" "}
                   para finales de 2023.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

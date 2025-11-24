@@ -1,8 +1,8 @@
 // Libs
 import { Open_Sans } from "next/font/google";
 import Head from "next/head";
-import { FaInfoCircle } from "react-icons/fa";
-import { HiOutlineExternalLink } from "react-icons/hi";
+// import { FaInfoCircle } from "react-icons/fa";
+// import { HiOutlineExternalLink } from "react-icons/hi";
 
 // Components
 import Biography from "@/components/biography/biography";
@@ -63,7 +63,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="flex items-center justify-center mt-4">
+          {/* <div className="flex items-center justify-center mt-4">
             <FaInfoCircle className="mr-2 text-gray-400" />
             <p className="text-gray-400">
               Creado con
@@ -77,7 +77,7 @@ export default function Home() {
                 <HiOutlineExternalLink className="ml-1" />
               </a>
             </p>
-          </div>
+          </div> */}
         </div>
 
         <Skills />
